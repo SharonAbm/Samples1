@@ -1,6 +1,7 @@
 package testScripts;
 
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +27,7 @@ import commonUtils.Utilities;
 
 
 public class LoginTest {
-	WebDriver driver;
+	static WebDriver driver;
 	Properties Prop;
 	//@Parameters("browser")
 	@BeforeTest
@@ -55,7 +56,7 @@ public class LoginTest {
 	}
 	
 	@AfterMethod
-	public void teardown {
+	public static void teardown() {
 		driver.close();
 		}
 		
@@ -66,4 +67,3 @@ public class LoginTest {
 
 
 
-}
